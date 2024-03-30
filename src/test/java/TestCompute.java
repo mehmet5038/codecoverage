@@ -18,13 +18,13 @@ public class TestCompute {
         assertEquals(-1, c.countNumberOfOccurrences("208OpelAstraH1.3CDTI"));
     }
     @Test
-    public void testElementNotInQueue() {
+    public void test_not_found() {
         when(mq.size()).thenReturn(10);
         when(mq.contains("1998NissanSkylineGTR")).thenReturn(false);
         assertEquals(0, c.countNumberOfOccurrences("2000FordFiesta1.25"));
     }
     @Test
-    public void testElementOccursMultipleTimes() {
+    public void test_multiple_times() {
         when(mq.size()).thenReturn(6);
         when(mq.contains("car")).thenReturn(true);
         when(mq.getAt(0)).thenReturn("car");
